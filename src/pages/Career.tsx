@@ -487,30 +487,13 @@ const Career = () => {
 
                     <div className="flex gap-2 pt-2">
                       <Button 
-                        variant="outline" 
-                        className="flex-1 gap-2 bg-background hover:bg-background/80"
+                        className="w-full gap-2 shadow-sm"
                         onClick={() => {
-                          setSelectedInternship(internship);
-                          setIsDetailsDialogOpen(true);
+                          window.location.href = `/internship/${internship.id}`;
                         }}
                       >
-                        Details
+                        I am Interested
                         <ChevronRight className="w-4 h-4" />
-                      </Button>
-                      <Button 
-                        className="flex-1 gap-2 shadow-sm"
-                        onClick={() => {
-                          executeProtectedAction(
-                            'apply_internship',
-                            internship,
-                            () => {
-                              setSelectedInternship(internship);
-                              setIsApplyDialogOpen(true);
-                            }
-                          );
-                        }}
-                      >
-                        Apply Now
                       </Button>
                     </div>
                   </CardContent>

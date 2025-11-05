@@ -21,6 +21,7 @@ const EventsPage = lazy(() => import("./pages/Events"));
 const EventsGallery = lazy(() => import("./pages/EventsGallery"));
 const LearningPath = lazy(() => import("./pages/LearningPath"));
 const Career = lazy(() => import("./pages/Career"));
+const InternshipDetail = lazy(() => import("./pages/InternshipDetail"));
 const Engagements = lazy(() => import("./pages/Engagements"));
 const Workshop = lazy(() => import("./pages/Workshop"));
 const Mentorship = lazy(() => import("./pages/Mentorship"));
@@ -120,6 +121,7 @@ const App = () => (
           <Route path="/learning-path/uiux" element={<UIUXDomain />} />
           <Route path="/learning-path/arvr" element={<ARVRDomain />} />
           <Route path="/career" element={<Career />} />
+          <Route path="/internship/:id" element={<InternshipDetail />} />
           <Route path="/engagements" element={<Engagements />} />
           <Route path="/more" element={<Engagements />} />
           <Route path="/workshop" element={<Workshop />} />
