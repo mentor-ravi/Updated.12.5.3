@@ -224,20 +224,7 @@ const ExploreSection = () => {
               </motion.div>)}
 
             {/* Leaf decorations */}
-            {[...Array(8)].map((_, i) => <motion.div key={`leaf-${i}`} className="absolute text-2xl md:text-3xl opacity-50 z-0" style={{
-            left: `${10 + i * 12}%`,
-            top: `${20 + i % 3 * 25}%`
-          }} animate={{
-            y: [0, -15, 0],
-            x: [0, 5, 0],
-            rotate: [0, -10, 0]
-          }} transition={{
-            duration: 4 + Math.random() * 2,
-            repeat: Infinity,
-            delay: i * 0.4
-          }}>
-                🌿
-              </motion.div>)}
+            {[...Array(8)].map((_, i) => {})}
 
             {domains.map(domain => <DomainNode key={domain.id} domain={domain} isSelected={false} isHidden={false} onClick={() => handleDomainClick(domain)} onHoverChange={isHovered => setHoveredDomainId(isHovered ? domain.id : null)} zIndex={getZIndex(domain.id)} />)}
           </div>
