@@ -207,22 +207,6 @@ const ExploreSection = () => {
 
           {/* Domain Seeds Organic Layout */}
           <div className="relative w-full h-[450px] md:h-[650px] max-w-5xl md:max-w-7xl mx-auto">
-            {/* Sparkle decorations */}
-            {sparkles.map((sparkle, i) => <motion.div key={`sparkle-${i}`} className="absolute text-2xl md:text-3xl z-0" style={{
-            left: `${sparkle.x}%`,
-            top: `${sparkle.y}%`
-          }} animate={{
-            opacity: [0.4, 0.8, 0.4],
-            scale: [0.9, 1.3, 0.9],
-            rotate: [0, 180, 360]
-          }} transition={{
-            duration: 3 + Math.random() * 2,
-            repeat: Infinity,
-            delay: i * 0.3
-          }}>
-                ✨
-              </motion.div>)}
-
 
             {domains.map(domain => <DomainNode key={domain.id} domain={domain} isSelected={false} isHidden={false} onClick={() => handleDomainClick(domain)} onHoverChange={isHovered => setHoveredDomainId(isHovered ? domain.id : null)} zIndex={getZIndex(domain.id)} />)}
           </div>
